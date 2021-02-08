@@ -13,7 +13,6 @@ import { gql, useQuery } from "@apollo/client";
 
 //@ts-ignore
 const Index: FC = ({ selectedWorks }) => {
-  const { pathname } = useRouter();
   const [items, setItems] = useState([]);
 
   const PageQueryOptions = {
@@ -46,7 +45,7 @@ const Index: FC = ({ selectedWorks }) => {
   if (error) return "Something Bad Happened";
 
   return (
-    <Layout pathname={pathname} pageTitle="Nextjs Starter Peacock">
+    <Layout pageTitle="Nextjs Starter Peacock">
       <StyledIndexPage>
         {/* {data.posts.data.slice(0, 2).map((item) => (
           <p>
