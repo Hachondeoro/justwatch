@@ -23,6 +23,10 @@ export const NavSection = styled.header`
   margin-bottom: 5em;
   position: relative;
   z-index: 10;
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
 
   .no-underline {
     color: var(--text-color-dark);

@@ -4,6 +4,7 @@ import { experiments } from "../content/experiments";
 import { Container } from "./container";
 import { StyledExperimentsSection } from "./styles/experiments.styles";
 import ExperimentItem from "./experiment";
+import Tilt from 'react-parallax-tilt';
 
 const ExperimentsSection = () => (
   <StyledExperimentsSection>

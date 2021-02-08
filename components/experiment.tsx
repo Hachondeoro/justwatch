@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "@emotion/styled";
 import { GitHub, Codepen, ExternalLink } from "react-feather";
+import Tilt from 'react-parallax-tilt';
 
 import {
   StyledExperimentItemContainer,
@@ -23,26 +24,37 @@ const ExperimentItem = ({ experiment }) => {
   }
 
   return (
-    <Tilter options={{ scale: 1, speed: 200 }}>
-      <StyledExperimentItemContainer
-        className="experiments-container"
-        href={experiment.link}
-        rel="noopener noreferrer"
-        target="_blank"
+    <div>
+      <Tilt
+        // className="parallax-effect-glare-scale"
+        // className="experiments-container"
+        perspective={500}
+        glareEnable={true}
+        glareMaxOpacity={0.45}
+        scale={1.1}
       >
-        <div className="experiment-meta">
-          <time className="experiment-date">{experiment.date}</time>
-          <span>{icon}</span>
-        </div>
-        <h3 className="experiment-item-heading">{experiment.title}</h3>
-        <p>{experiment.description}</p>
-        <ul>
-          {experiment.tags.map((tag, index) => (
-            <li key={index}>{tag}</li>
-          ))}
-        </ul>
-      </StyledExperimentItemContainer>
-    </Tilter>
+        <StyledExperimentItemContainer
+          className="experiments-container"
+          href={experiment.link}
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <div className="experiment-meta">
+            <time className="experiment-date">{experiment.date}</time>
+            <span>{icon}</span>
+          </div>
+          <h3 className="experiment-item-heading">{experiment.title}</h3>
+          <p>{experiment.description}</p>
+          <ul>
+            {experiment.tags.map((tag, index) => (
+              <li key={index}>{tag}</li>
+            ))}
+          </ul>
+        </StyledExperimentItemContainer>
+      </Tilt>
+
+    </div >
+
   );
 };
 

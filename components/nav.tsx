@@ -6,6 +6,7 @@ import Logo from "./logo";
 import { Container } from "./container";
 import SiteConfig from "../config/index.json";
 import { MenuContext } from ".";
+import Image from "next/image";
 
 const Nav = () => {
   const menuContext = useContext(MenuContext);
@@ -19,8 +20,13 @@ const Nav = () => {
           <div className="navLeft">
             <Link href="/">
               <a className="no-underline">
-                <Logo />
-                <span>{SiteConfig.author.name}</span>
+                <div className="image">
+                  <Image
+                    src="/images/JustWatch-logo-large.png"
+                    height={45}
+                    width={300}
+                  />
+                </div>
               </a>
             </Link>
           </div>
@@ -32,35 +38,20 @@ const Nav = () => {
             ></StyledHamburger>
 
             <ul className="navLinkList">
-              <li className="navLinkItem">
-                <Link href="/works">
-                  <a>Work</a>
+              {/* <li className="navLinkItem">
+                <Link href="/new">
+                  <a>New</a>
                 </Link>
-              </li>
+              </li> */}
               <li className="navLinkItem">
-                <Link href="/articles">
-                  <a>Articles</a>
+                <Link href="/popular">
+                  <a>Popular</a>
                 </Link>
               </li>
               <li className="navLinkItem">
                 <Link href="/notes">
-                  <a>Notes</a>
+                  <a>Sign in</a>
                 </Link>
-              </li>
-              <li className="navLinkItem">
-                <Link href="/about">
-                  <a>About</a>
-                </Link>
-              </li>
-
-              <li className="navLinkItem">
-                <a
-                  href="https://github.com/vickOnRails/next-starter-peacock"
-                  target="_blank"
-                  rel="noopener norefferer"
-                >
-                  Source
-                </a>
               </li>
             </ul>
           </div>

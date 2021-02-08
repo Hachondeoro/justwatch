@@ -1,5 +1,8 @@
 /* @import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Mono:wght@400;700&display=swap"); */
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&family=DM+Sans:wght@400;700");
+html {
+  background-color: black;
+}
 
 *,
 *:after,
@@ -203,4 +206,12 @@ figcaption {
 /* Gutter for line numbers when the line-numbers plugin is active */
 .remark-highlight pre[class*="language-"].line-numbers {
   padding-left: 2.8em;
+}
+
+.photosContainer {
+  flex-direction: row;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
