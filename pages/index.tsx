@@ -53,7 +53,7 @@ const Index: FC = ({ selectedWorks }) => {
           </p>
         ))} */}
         <Welcome />
-        <DesignCode />
+        {/* <DesignCode /> */}
         <ExperimentsSection />
       </StyledIndexPage>
     </Layout>

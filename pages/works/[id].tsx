@@ -1,6 +1,6 @@
 import React from "react";
 import { useRouter } from "next/router";
-import Image from 'next/image'
+import Image from "next/image";
 
 import { Layout, Container } from "../../components";
 import { getAllContentIds, getContentData } from "../../lib/content";
@@ -12,15 +12,16 @@ import { StyledContent } from "../../components/styles/content.styles";
  */
 
 const Article = ({ worksData }) => {
-  const { pathname } = useRouter();
   const { title, contentHtml, description } = worksData;
 
   return (
-    <Layout pageTitle={title} pathname={pathname} pageDescription={description}>
+    <Layout pageTitle={title} pageDescription={description}>
       <Container width="narrow">
         <StyledContent>
           <time>{worksData.date}</time>
-          {worksData.previewImage && <Image src={worksData.previewImage} height={550} width={1200} />}
+          {worksData.previewImage && (
+            <Image src={worksData.previewImage} height={550} width={1200} />
+          )}
           <div dangerouslySetInnerHTML={{ __html: contentHtml }} />
         </StyledContent>
       </Container>

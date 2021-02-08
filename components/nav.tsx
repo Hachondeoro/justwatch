@@ -38,19 +38,9 @@ const Nav = () => {
             ></StyledHamburger>
 
             <ul className="navLinkList">
-              {/* <li className="navLinkItem">
-                <Link href="/new">
-                  <a>New</a>
-                </Link>
-              </li> */}
               <li className="navLinkItem">
                 <Link href="/popular">
                   <a>Popular</a>
-                </Link>
-              </li>
-              <li className="navLinkItem">
-                <Link href="/notes">
-                  <a>Sign in</a>
                 </Link>
               </li>
             </ul>
